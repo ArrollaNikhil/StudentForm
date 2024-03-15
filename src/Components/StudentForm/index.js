@@ -906,7 +906,7 @@ class StudentForm extends Component {
     return (
       <>
         <label htmlFor="presentPostal" className="text-label">
-          City
+          Postal Code
         </label>
         <input
           onBlur={this.onBlurPresentPostal}
@@ -929,7 +929,7 @@ class StudentForm extends Component {
     return (
       <>
         <label htmlFor="presentCountry" className="text-label">
-          City
+          Country
         </label>
         <input
           onBlur={this.onBlurPresentCountry}
@@ -950,7 +950,7 @@ class StudentForm extends Component {
     return (
       <>
         <label htmlFor="checkBox" className="text-label">
-          City
+          checked details
         </label>
         <input
           type="checkbox"
