@@ -160,6 +160,7 @@ class StudentForm extends Component {
   };
 
   onChangeCheckBox = (event) => {
+    const { checkBox } = this.state;
     this.setState({ checkBox: !checkBox });
   };
 
@@ -361,7 +362,7 @@ class StudentForm extends Component {
 
   validateCheckBox = () => {
     const { checkBox } = this.state;
-    return checkBox !== true;
+    return checkBox !== false;
   };
 
   onSubmitForm = (event) => {
@@ -906,7 +907,7 @@ class StudentForm extends Component {
     return (
       <>
         <label htmlFor="presentPostal" className="text-label">
-          Postal Code
+          Postal code
         </label>
         <input
           onBlur={this.onBlurPresentPostal}
@@ -949,16 +950,16 @@ class StudentForm extends Component {
     const errorHighlighted = showCheckboxErrorMessage ? "error-highlight" : "";
     return (
       <>
-        <label htmlFor="checkBox" className="text-label">
-          checked details
-        </label>
         <input
           type="checkbox"
           id="checkBox"
           checked={checkBox}
           onChange={this.onChangeCheckBox}
-          className={`input-element ${errorHighlighted}`}
+          className={`checkbox ${errorHighlighted}`}
         />
+        <label htmlFor="checkBox" className="check-label">
+          Check all
+        </label>
       </>
     );
   };
@@ -1182,7 +1183,7 @@ class StudentForm extends Component {
           </div>
         </div>
         <div>
-          <div className="input-container-address">
+          <div className="input-container-check">
             {" "}
             {this.renderCheckbox()}
             {showCheckboxErrorMessage ? (
